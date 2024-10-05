@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #5f2c82, #49a09d);
+}
+
+.todo-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#task-input, #datetime-input {
+    padding: 10px;
+    width: calc(100% - 20px);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#task-input:focus, #datetime-input:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.add-task-btn {
+    background-color: #ff7f50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.add-task-btn:hover {
+    background-color: #ff6347;
+}
+
+.task-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.task-item {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+    position: relative;
+}
+
+.task-item.completed {
+    background-color: rgba(173, 255, 47, 0.8);
+    text-decoration: line-through;
+}
+
+.task-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn, .complete-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.edit-btn:hover {
+    color: #ffa500;
+}
+
+.complete-btn:hover {
+    color: #32cd32;
+}
+
+.delete-btn:hover {
+    color: #ff4500;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+}
+
+.filters button {
+    padding: 8px 12px;
+    background-color: #6a5acd;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+    background-color: #483d8b;
+}
+
+@media (max-width: 400px) {
+    .todo-container {
+        width: 95%;
+    }
+
+    #task-input, #datetime-input {
+        width: 100%;
+    }
+}
